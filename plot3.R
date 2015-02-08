@@ -1,8 +1,5 @@
 plot3<- function(){
 ## This file creates the third plot of the project
-
-## Checking for existence of needed directories
-## if (!file.exists("MFiles")){ dir.create("MFiles")}
 require(dplyr)
 require(stringr)
 data<-read.table("household_power_consumption.txt",sep=";")
@@ -24,7 +21,7 @@ plot(datga3,xlab="",xaxt="n",yaxp=c(0,40,4),ylab="Energy Sub-Mettering",type="l"
 points(datga2,col="red",type="l")
 points(datga1,col="black",type="l")
 axis(1,at=c(0,1440,2880),labels=c("Thu","Fri","Sat"))
-legend("topleft",legend=c("Sub_Metering_1","Sub_Metering_2","Sub_Metering_3"),col=c("Black","Red","Blue"),lwd=c(1,1,1))
+legend("topright",legend=c("Sub_Metering_1","Sub_Metering_2","Sub_Metering_3"),col=c("Black","Red","Blue"),lwd=c(1,1,1))
 ##
 dev.off()
 }
